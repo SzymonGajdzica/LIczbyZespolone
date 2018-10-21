@@ -1,16 +1,17 @@
 #pragma once
 class ComplexNumber
 {
-private: 
+private:
 	double im;
 	double re;
 
 public:
+	static int numberOfAllocations;
 	ComplexNumber();
-	ComplexNumber(double num);
+	explicit ComplexNumber(double num);
 	ComplexNumber(double re, double im);
-	~ComplexNumber();
 	ComplexNumber(const ComplexNumber & complexNumber);
+	~ComplexNumber();
 	void setRe(double re);
 	double getRe() const;
 	void setIm(double im);
